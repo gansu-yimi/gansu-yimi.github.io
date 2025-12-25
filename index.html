@@ -219,6 +219,137 @@
             .qr-codes { flex-direction: column; align-items: center; }
         }
         <style>
+    /* 公众号二维码区域样式 */
+    .qrcode-card {
+        display: flex;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        max-width: 400px;
+        min-width: 350px;
+    }
+    
+    .qrcode-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    }
+    
+    .qrcode-image-container {
+        width: 180px;
+        background: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .qrcode-image {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid #eee;
+    }
+    
+    .qrcode-content {
+        flex: 1;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .qrcode-features {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 15px;
+    }
+    
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #555;
+        font-size: 0.9rem;
+    }
+    
+    .feature-item i {
+        color: #E63946;
+        width: 20px;
+    }
+    
+    .guide-step {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        background: #E63946;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+    
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+        .qrcode-card {
+            flex-direction: column;
+            min-width: 280px;
+            max-width: 100%;
+        }
+        
+        .qrcode-image-container {
+            width: 100%;
+            height: 180px;
+            padding: 15px;
+        }
+        
+        .qrcode-image {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .qrcode-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .qrcode-features {
+            align-items: center;
+        }
+        
+        .feature-item {
+            justify-content: center;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        #wechat-section {
+            padding: 30px 15px;
+        }
+        
+        .qrcode-card {
+            min-width: 100%;
+        }
+        
+        .guide-step {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+    }
+</style>
+        <style>
     /* 轮播图样式 */
     .carousel-container {
         position: relative;
@@ -551,6 +682,50 @@
         </div>
         <p>我们与数十家企业、机构建立合作，落地公益项目20余个，志愿者队伍超500人。</p>
     </section>
+    <!-- 简洁版公众号二维码区域 -->
+<section style="padding: 40px 20px; background: white; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        
+        <h2 style="color: #E63946; margin-bottom: 20px;">
+            <i class="fab fa-weixin"></i> 微信关注
+        </h2>
+        
+        <p style="color: #666; margin-bottom: 30px; line-height: 1.6;">
+            关注"依米社服"公众号，第一时间获取公益资讯、活动报名和项目进展。
+        </p>
+        
+        <div style="display: inline-block; padding: 25px; background: #f8f9fa; border-radius: 12px; margin: 20px auto;">
+            <img src="images/yimi.jpg" 
+                 alt="依米社服公众号二维码" 
+                 style="width: 200px; height: 200px; display: block; margin: 0 auto 15px; border-radius: 8px; border: 1px solid #ddd;">
+            
+            <div style="text-align: center;">
+                <h3 style="color: #E63946; margin-bottom: 5px;">依米社服</h3>
+                <p style="color: #555; margin-bottom: 15px;">官方微信公众号</p>
+                
+                <div style="display: inline-flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <span style="display: inline-flex; align-items: center; gap: 5px; color: #457B9D;">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>活动报名</span>
+                    </span>
+                    <span style="display: inline-flex; align-items: center; gap: 5px; color: #457B9D;">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>最新资讯</span>
+                    </span>
+                    <span style="display: inline-flex; align-items: center; gap: 5px; color: #457B9D;">
+                        <i class="fas fa-heart"></i>
+                        <span>爱心捐赠</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 25px; color: #888; font-size: 0.9rem;">
+            <p><i class="fas fa-lightbulb"></i> 提示：长按二维码图片 → 识别图中二维码</p>
+        </div>
+        
+    </div>
+</section>
 <!-- ==================== -->
 <!-- 活动照片轮播展示区域 -->
 <!-- ==================== -->
@@ -941,6 +1116,7 @@
 </body>
 
 </html>
+
 
 
 
