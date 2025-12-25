@@ -218,6 +218,260 @@
             .nav-links a { width: 100%; text-align: center; }
             .qr-codes { flex-direction: column; align-items: center; }
         }
+        <style>
+    /* 轮播图样式 */
+    .carousel-container {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .carousel-wrapper {
+        position: relative;
+        height: 500px;
+        overflow: hidden;
+    }
+    
+    .carousel-inner {
+        display: flex;
+        height: 100%;
+        transition: transform 0.6s ease-in-out;
+    }
+    
+    .carousel-item {
+        min-width: 100%;
+        height: 100%;
+    }
+    
+    .carousel-content {
+        display: flex;
+        height: 100%;
+        background: white;
+    }
+    
+    .carousel-image {
+        width: 55%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .carousel-caption {
+        width: 45%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: white;
+    }
+    
+    .carousel-caption h3 {
+        color: #E63946;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    
+    .carousel-caption p {
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .activity-stats {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .activity-stats span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #457B9D;
+        font-weight: 500;
+        background: #f0f8ff;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+    
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(255,255,255,0.9);
+        border: none;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        color: #E63946;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 10;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .carousel-btn:hover {
+        background: #E63946;
+        color: white;
+        transform: translateY(-50%) scale(1.1);
+    }
+    
+    .prev-btn {
+        left: 20px;
+    }
+    
+    .next-btn {
+        right: 20px;
+    }
+    
+    .carousel-indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        z-index: 10;
+    }
+    
+    .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .indicator.active {
+        background: #E63946;
+        transform: scale(1.2);
+    }
+    
+    .project-tags {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+        background: white;
+        border-top: 1px solid #eee;
+    }
+    
+    .project-tag {
+        padding: 8px 20px;
+        background: #f8f9fa;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: #666;
+        transition: all 0.3s ease;
+    }
+    
+    .project-tag.active {
+        background: #E63946;
+        color: white;
+    }
+    
+    .project-tag:hover {
+        background: #457B9D;
+        color: white;
+    }
+    
+    /* 响应式设计 */
+    @media (max-width: 992px) {
+        .carousel-wrapper {
+            height: 450px;
+        }
+        
+        .carousel-caption {
+            padding: 30px;
+        }
+        
+        .carousel-caption h3 {
+            font-size: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .carousel-wrapper {
+            height: 400px;
+        }
+        
+        .carousel-content {
+            flex-direction: column;
+        }
+        
+        .carousel-image {
+            width: 100%;
+            height: 50%;
+        }
+        
+        .carousel-caption {
+            width: 100%;
+            height: 50%;
+            padding: 20px;
+        }
+        
+        .carousel-caption h3 {
+            font-size: 1.3rem;
+        }
+        
+        .carousel-caption p {
+            font-size: 1rem;
+        }
+        
+        .activity-stats {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .carousel-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 1rem;
+        }
+        
+        .project-tags {
+            flex-wrap: wrap;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .carousel-wrapper {
+            height: 350px;
+        }
+        
+        .carousel-caption {
+            padding: 15px;
+        }
+        
+        .carousel-caption h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .carousel-caption p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .activity-stats span {
+            font-size: 0.8rem;
+            padding: 6px 12px;
+        }
+    }
+</style>
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -297,7 +551,148 @@
         </div>
         <p>我们与数十家企业、机构建立合作，落地公益项目20余个，志愿者队伍超500人。</p>
     </section>
-
+<!-- ==================== -->
+<!-- 活动照片轮播展示区域 -->
+<!-- ==================== -->
+<section id="activity-carousel" style="padding: 40px 20px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        
+        <!-- 标题区域 -->
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="color: #E63946; font-size: 2rem; margin-bottom: 10px;">
+                <i class="fas fa-images"></i> 活动剪影
+            </h2>
+            <p style="color: #666; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                每一次温暖的相遇，都是公益路上最美的风景。记录我们与受助者之间的真实故事。
+            </p>
+        </div>
+        
+        <!-- 轮播图容器 -->
+        <div class="carousel-container">
+            <!-- 轮播图主体 -->
+            <div class="carousel-wrapper">
+                <!-- 轮播内容 -->
+                <div class="carousel-inner" id="carouselInner">
+                    
+                    <!-- 轮播项 1：助学助孤 -->
+                    <div class="carousel-item active">
+                        <div class="carousel-content">
+                            <img src="images/activities/education-1.jpg" 
+                                 alt="依米公益助学活动：为困境儿童发放梦想书包" 
+                                 class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3>助学助孤 · 播种希望</h3>
+                                <p>在甘肃多所乡村学校建立"爱心图书室"，为留守儿童送去"梦想书包"和温暖关怀。</p>
+                                <div class="activity-stats">
+                                    <span><i class="fas fa-child"></i> 服务5000+儿童</span>
+                                    <span><i class="fas fa-book"></i> 捐赠3000+图书</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 轮播项 2：敬老助残 -->
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/activities/elderly-1.jpg" 
+                                 alt="依米公益爱心食堂项目：为老人提供营养午餐" 
+                                 class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3>敬老助残 · 温情陪伴</h3>
+                                <p>"爱心食堂"为特困、孤寡及高龄老人提供营养午餐，已服务超过20000人次。</p>
+                                <div class="activity-stats">
+                                    <span><i class="fas fa-utensils"></i> 20000+用餐服务</span>
+                                    <span><i class="fas fa-heart"></i> 10000+服务时长</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 轮播项 3：环境保护 -->
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/activities/environment-1.jpg" 
+                                 alt="依米公益绿行侠环保活动：志愿者清理母亲河垃圾" 
+                                 class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3>环境保护 · 绿色同行</h3>
+                                <p>"绿行侠在行动"将登山、骑行与清理垃圾相结合，清理垃圾约5吨，参与近3000人。</p>
+                                <div class="activity-stats">
+                                    <span><i class="fas fa-leaf"></i> 50+场活动</span>
+                                    <span><i class="fas fa-recycle"></i> 5吨垃圾清理</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 轮播项 4：社区服务 -->
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/activities/community-1.jpg" 
+                                 alt="依米公益社区市集：居民参与家门口的微慈善" 
+                                 class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3>社区服务 · 邻里守望</h3>
+                                <p>"依米益集"便民公益市集融合义卖、健康咨询等服务，累计服务居民超8000人次。</p>
+                                <div class="activity-stats">
+                                    <span><i class="fas fa-home"></i> 30+场市集</span>
+                                    <span><i class="fas fa-users"></i> 8000+服务人次</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 轮播项 5：应急救援 -->
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <img src="images/activities/emergency-1.jpg" 
+                                 alt="依米公益应急救援：志愿者参与灾害救援协作" 
+                                 class="carousel-image">
+                            <div class="carousel-caption">
+                                <h3>应急救援 · 快速响应</h3>
+                                <p>与专业救援力量协作，在洪灾、地震等突发事件中高效协助人员搜救和物资转运。</p>
+                                <div class="activity-stats">
+                                    <span><i class="fas fa-first-aid"></i> 20+次救援</span>
+                                    <span><i class="fas fa-hands-helping"></i> 10000+受灾群众</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- 导航按钮 -->
+                <button class="carousel-btn prev-btn" onclick="prevSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next-btn" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- 指示点 -->
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <span class="indicator active" onclick="goToSlide(0)"></span>
+                    <span class="indicator" onclick="goToSlide(1)"></span>
+                    <span class="indicator" onclick="goToSlide(2)"></span>
+                    <span class="indicator" onclick="goToSlide(3)"></span>
+                    <span class="indicator" onclick="goToSlide(4)"></span>
+                </div>
+                
+            </div>
+            
+            <!-- 项目标签 -->
+            <div class="project-tags">
+                <span class="project-tag active" data-slide="0">助学助孤</span>
+                <span class="project-tag" data-slide="1">敬老助残</span>
+                <span class="project-tag" data-slide="2">环境保护</span>
+                <span class="project-tag" data-slide="3">社区服务</span>
+                <span class="project-tag" data-slide="4">应急救援</span>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
     <!-- 支持我们 -->
     <section id="donate">
         <h2><i class="fas fa-heart"></i> 支持我们</h2>
@@ -461,9 +856,128 @@
             });
         });
     </script>
+    <script>
+    // 轮播图功能
+    let currentSlide = 0;
+    let autoPlayInterval;
+    const slides = document.querySelectorAll('.carousel-item');
+    const indicators = document.querySelectorAll('.indicator');
+    const tags = document.querySelectorAll('.project-tag');
+    const totalSlides = slides.length;
+    
+    // 初始化轮播图
+    function initCarousel() {
+        // 设置自动播放
+        startAutoPlay();
+        
+        // 添加键盘控制
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+        
+        // 添加触摸支持
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        const carouselInner = document.getElementById('carouselInner');
+        
+        carouselInner.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        carouselInner.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide(); // 向左滑动
+                } else {
+                    prevSlide(); // 向右滑动
+                }
+            }
+        }
+    }
+    
+    // 切换到指定幻灯片
+    function goToSlide(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        
+        currentSlide = index;
+        updateCarousel();
+        resetAutoPlay();
+    }
+    
+    // 上一张
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
+    }
+    
+    // 下一张
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+    
+    // 更新轮播图状态
+    function updateCarousel() {
+        // 移动轮播内容
+        document.getElementById('carouselInner').style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // 更新指示点
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentSlide);
+        });
+        
+        // 更新项目标签
+        tags.forEach((tag, index) => {
+            tag.classList.toggle('active', index === currentSlide);
+        });
+    }
+    
+    // 开始自动播放
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(() => {
+            nextSlide();
+        }, 5000); // 5秒切换一次
+    }
+    
+    // 重置自动播放（用户交互后重新计时）
+    function resetAutoPlay() {
+        clearInterval(autoPlayInterval);
+        startAutoPlay();
+    }
+    
+    // 绑定项目标签点击事件
+    document.querySelectorAll('.project-tag').forEach(tag => {
+        tag.addEventListener('click', function() {
+            const slideIndex = parseInt(this.getAttribute('data-slide'));
+            goToSlide(slideIndex);
+        });
+    });
+    
+    // 页面加载完成后初始化
+    document.addEventListener('DOMContentLoaded', initCarousel);
+    
+    // 页面可见性变化时控制自动播放
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            clearInterval(autoPlayInterval);
+        } else {
+            resetAutoPlay();
+        }
+    });
+</script>
 </body>
 
 </html>
+
 
 
 
