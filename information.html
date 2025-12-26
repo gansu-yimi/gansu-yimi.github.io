@@ -1,1 +1,420 @@
-
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息公开 - 甘肃依米社会工作服务中心</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        /* 头部 */
+        .info-header {
+            background: linear-gradient(135deg, #E63946 0%, #457B9D 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .back-home {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            margin-top: 2rem;
+            transition: all 0.3s;
+        }
+        
+        .back-home:hover {
+            background: white;
+            color: #E63946;
+        }
+        
+        /* 主要内容 */
+        .info-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        /* 信息分类 */
+        .info-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+        
+        .section-title {
+            color: #E63946;
+            border-left: 4px solid #F4A261;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        /* 审计报告卡片 */
+        .audit-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: #f8f9fa;
+        }
+        
+        .audit-year {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .year-icon {
+            width: 50px;
+            height: 50px;
+            background: #E63946;
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .year-icon.blue { background: #457B9D; }
+        .year-icon.orange { background: #F4A261; }
+        
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-view {
+            background: #f8f9fa;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        
+        .btn-download {
+            background: #E63946;
+            color: white;
+        }
+        
+        .btn-download.blue { background: #457B9D; }
+        .btn-download.orange { background: #F4A261; }
+        
+        /* 表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background: #f8f9fa;
+            color: #457B9D;
+            font-weight: 600;
+        }
+        
+        /* 页脚 */
+        .info-footer {
+            text-align: center;
+            padding: 2rem;
+            background: #1D3557;
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .info-container {
+                padding: 2rem 1rem;
+            }
+            
+            .audit-year {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- 页面头部 -->
+    <header class="info-header">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">
+            <i class="fas fa-info-circle"></i> 信息公开专栏
+        </h1>
+        <p style="opacity: 0.9; max-width: 800px; margin: 0 auto;">
+            甘肃依米社会工作服务中心信息公开平台 - 透明公益，诚信服务
+        </p>
+        <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i> 返回首页
+        </a>
+    </header>
+    
+    <!-- 主要内容容器 -->
+    <main class="info-container">
+        
+        <!-- 机构基本信息 -->
+        <section id="basic-info" class="info-section">
+            <h2 class="section-title">
+                <i class="fas fa-building"></i> 机构基本信息
+            </h2>
+            
+            <table>
+                <tr>
+                    <th style="width: 120px;">项目</th>
+                    <th>内容</th>
+                </tr>
+                <tr>
+                    <td>机构名称</td>
+                    <td>甘肃依米社会工作服务中心</td>
+                </tr>
+                <tr>
+                    <td>统一信用代码</td>
+                    <td>52620000079270379T</td>
+                </tr>
+                <tr>
+                    <td>法定代表人</td>
+                    <td>韩文旭</td>
+                </tr>
+                <tr>
+                    <td>成立时间</td>
+                    <td>2014年6月1日</td>
+                </tr>
+                <tr>
+                    <td>业务范围</td>
+                    <td>助学助孤、敬老助残、环境保护、社区服务、应急救援</td>
+                </tr>
+                <tr>
+                    <td>联系电话</td>
+                    <td>18693274225</td>
+                </tr>
+                <tr>
+                    <td>年检情况</td>
+                    <td>2022-2024年均合格</td>
+                </tr>
+            </table>
+        </section>
+        
+        <!-- 年度审计报告 -->
+        <section id="audit-reports" class="info-section">
+            <h2 class="section-title">
+                <i class="fas fa-file-pdf"></i> 年度审计报告
+            </h2>
+            
+            <p style="color: #666; margin-bottom: 1.5rem;">
+                近三年审计报告由甘肃华信会计师事务所出具无保留意见审计报告。
+            </p>
+            
+            <!-- 2024年审计报告 -->
+            <div class="audit-card">
+                <div class="audit-year">
+                    <div class="year-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: #333; margin: 0;">2024年度审计报告</h3>
+                        <p style="color: #888; margin: 5px 0 0 0; font-size: 0.9rem;">
+                            审计期间：2024.1.1 - 2024.12.31
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="margin: 1rem 0;">
+                    <p style="color: #555; margin: 0.5rem 0;">
+                        <strong>关键数据：</strong>总收入85.0万元，总支出78.0万元，项目支出占比85%
+                    </p>
+                    <p style="color: #555; margin: 0.5rem 0;">
+                        <strong>审计意见：</strong>无保留意见
+                    </p>
+                </div>
+                
+                <div class="btn-group">
+                    <a href="documents/2024-audit-report.pdf" target="_blank" class="btn btn-view">
+                        <i class="fas fa-external-link-alt"></i> 在线查看
+                    </a>
+                    <a href="documents/2024-audit-report.pdf" 
+                       download="甘肃依米-2024审计报告.pdf"
+                       class="btn btn-download">
+                        <i class="fas fa-download"></i> 下载PDF
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 2023年审计报告 -->
+            <div class="audit-card">
+                <div class="audit-year">
+                    <div class="year-icon blue">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: #333; margin: 0;">2023年度审计报告</h3>
+                        <p style="color: #888; margin: 5px 0 0 0; font-size: 0.9rem;">
+                            审计期间：2023.1.1 - 2023.12.31
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="margin: 1rem 0;">
+                    <p style="color: #555; margin: 0.5rem 0;">
+                        <strong>关键数据：</strong>总收入72.0万元，总支出68.0万元，项目支出占比85%
+                    </p>
+                    <p style="color: #555; margin: 0.5rem 0;">
+                        <strong>审计意见：</strong>无保留意见
+                    </p>
+                </div>
+                
+                <div class="btn-group">
+                    <a href="documents/2023-audit-report.pdf" target="_blank" class="btn btn-view">
+                        <i class="fas fa-external-link-alt"></i> 在线查看
+                    </a>
+                    <a href="documents/2023-audit-report.pdf" 
+                       download="甘肃依米-2023审计报告.pdf"
+                       class="btn btn-download blue">
+                        <i class="fas fa-download"></i> 下载PDF
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 2022年审计报告 -->
+            <div class="audit-card">
+                <div class="audit-year">
+                    <div class="year-icon orange">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: #333; margin: 0;">2022年度审计报告</h3>
+                        <p style="color: #888; margin: 5px 0 0 0; font-size: 0.9rem;">
+                            审计期间：2022.1.1 - 2022.12.31
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="margin: 1rem 0;">
+                    <p style="color: #555; margin: 0.5rem 0;">
+                        <strong>关键数据：</strong>总收入65.0万元，总支出62.0万元，项目支出占比84%
+                    </p>
+                    <p style="color: #555; margin: 0.5rem 0;">
+                        <strong>审计意见：</strong>无保留意见
+                    </p>
+                </div>
+                
+                <div class="btn-group">
+                    <a href="documents/2022-audit-report.pdf" target="_blank" class="btn btn-view">
+                        <i class="fas fa-external-link-alt"></i> 在线查看
+                    </a>
+                    <a href="documents/2022-audit-report.pdf" 
+                       download="甘肃依米-2022审计报告.pdf"
+                       class="btn btn-download orange">
+                        <i class="fas fa-download"></i> 下载PDF
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+        
+        <!-- 项目信息 -->
+        <section id="project-info" class="info-section">
+            <h2 class="section-title">
+                <i class="fas fa-project-diagram"></i> 项目执行情况
+            </h2>
+            
+            <div style="margin: 1.5rem 0;">
+                <h3 style="color: #333; margin-bottom: 1rem;">2024年主要项目成果</h3>
+                <ul style="color: #555; list-style-position: inside;">
+                    <li style="margin-bottom: 0.5rem;">"一老一小温暖包"项目：服务5000+人次</li>
+                    <li style="margin-bottom: 0.5rem;">"爱心食堂"项目：服务20000+人次</li>
+                    <li style="margin-bottom: 0.5rem;">"绿行侠在行动"：组织活动50+场</li>
+                    <li>"依米益集"：服务居民8000+人次</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 年度报告 -->
+        <section id="annual-reports" class="info-section">
+            <h2 class="section-title">
+                <i class="fas fa-book"></i> 年度工作报告
+            </h2>
+            
+            <div style="margin: 1.5rem 0;">
+                <p style="color: #666; margin-bottom: 1rem;">年度工作报告下载：</p>
+                
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#" style="padding: 10px 20px; background: #f8f9fa; color: #333; text-decoration: none; border-radius: 4px; border: 1px solid #ddd;">
+                        2024年度工作报告
+                    </a>
+                    <a href="#" style="padding: 10px 20px; background: #f8f9fa; color: #333; text-decoration: none; border-radius: 4px; border: 1px solid #ddd;">
+                        2023年度工作报告
+                    </a>
+                    <a href="#" style="padding: 10px 20px; background: #f8f9fa; color: #333; text-decoration: none; border-radius: 4px; border: 1px solid #ddd;">
+                        2022年度工作报告
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="info-footer">
+        <div style="margin-bottom: 1.5rem;">
+            <p style="font-size: 1.2rem;">甘肃依米社会工作服务中心信息公开平台</p>
+            <p>透明公益 · 诚信服务 · 接受监督</p>
+        </div>
+        <div>
+            <p>地址：甘肃省兰州市城关区东方红广场统办2号楼附5楼</p>
+            <p>邮箱：contact@yimi-gansu.org</p>
+            <p style="margin-top: 1rem; color: rgba(255,255,255,0.8); font-size: 0.9rem;">
+                本页面最后更新：2025年12月
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // 简单交互效果
+        document.querySelectorAll('.audit-card').forEach(card => {
+            card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    </script>
+    
+</body>
+</html>
